@@ -5,74 +5,78 @@
   flex-direction: column;
   margin-bottom: 16px;
 
-  .popularPlan {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 24px;
-    background-color: #222b38;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 16px;
-    text-transform: uppercase;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-  }
-
-  .plan {
-    width: 100%;
-    padding: 16px 16px 16px 2px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f1f5fb;
-    border-radius: 8px;
-    border: 2px solid #fff;
+  .box {
+    cursor: pointer;
 
     &:not(:last-child) {
       margin-bottom: 8px;
     }
 
-    .planName {
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    .planDetails {
+    .popularPlan {
       display: flex;
-      padding: 8px 12px;
-      background-color: #e1e9f4;
-      color: #222b38;
-      border-radius: 4px;
+      justify-content: center;
+      align-items: center;
+      height: 24px;
+      background-color: #222b38;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 16px;
+      text-transform: uppercase;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
 
-      .currency {
-        font-size: 16px;
-        line-height: 20px;
+    .plan {
+      width: 100%;
+      padding: 16px 16px 16px 2px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f1f5fb;
+      border-radius: 8px;
+      border: 2px solid #fff;
+
+      .planName {
+        font-size: 18px;
         font-weight: 700;
-        margin-right: 4px;
       }
 
-      .planPrice {
-        font-size: 48px;
-        line-height: 40px;
-        font-weight: 800;
+      .planDetails {
+        display: flex;
+        padding: 8px 12px;
+        background-color: #e1e9f4;
+        color: #222b38;
+        border-radius: 4px;
+
+        .currency {
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 700;
+          margin-right: 4px;
+        }
+
+        .planPrice {
+          font-size: 48px;
+          line-height: 40px;
+          font-weight: 800;
+        }
       }
     }
-  }
 
-  .isChecked {
-    border: 2px solid #0062f5;
-  }
+    .isChecked {
+      border: 2px solid #0062f5;
+    }
 
-  .mostPopular {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
+    .mostPopular {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
 
-  .isCheckedMostPopular {
-    border: 2px solid #0062f5;
-    background-color: #0062f5;
+    .isCheckedMostPopular {
+      border: 2px solid #0062f5;
+      background-color: #0062f5;
+    }
   }
 }
 
