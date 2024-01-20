@@ -1,0 +1,21 @@
+.resultBlock {
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  padding: 12px 24px;
+  color: #000;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .number {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+  }
+
+  .text {
+    font-weight: 600;
+    line-height: 24px;
+  }
+}

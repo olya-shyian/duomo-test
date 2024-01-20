@@ -1,0 +1,19 @@
+.resultBlock {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  padding: 12px 24px;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .checkedIcon {
+    padding-top: 6px;
+  }
+
+  .text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
