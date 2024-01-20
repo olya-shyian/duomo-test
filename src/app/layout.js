@@ -7,13 +7,13 @@ export const metadata = {
   description: "Marketing Funnel Implementation",
 };
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={lora.className}>
-        <Header />
-        <main className="layout">{children}</main>
-      </body>
-    </html>
-  );
-}
+const RootLayout = ({ children }) => (
+  <html lang="en">
+    <body className={lora.className}>
+      <Header />
+      <main className="layout">{children}</main>
+    </body>
+  </html>
+);
+
+export default RootLayout;

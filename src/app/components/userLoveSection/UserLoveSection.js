@@ -27,36 +27,31 @@ const userData = [
   },
 ];
 
-const UserLoveSection = () => {
-  return (
-    <Section title="Users love App!">
-      {userData.map(({ id, name, date, text }) => (
-        <div key={id} className={styles.cardItem}>
-          <Card style={{ marginBottom: "12px" }}>
-            <div
-              className={classNames(
-                styles.postItem,
-                plus_jakarta_sans.className
-              )}
-            >
-              <div className={styles.postInfo}>
-                <div className={styles.userInfo}>
-                  <div className={styles.name}>{name}</div>
-                  <div className={styles.date}>{date}</div>
-                </div>
-
-                <div className={styles.stars}>
-                  <Image alt="stars" src={stars} height={20} width={60} />
-                </div>
+const UserLoveSection = () => (
+  <Section title="Users love App!">
+    {userData.map(({ id, name, date, text }) => (
+      <div key={id} className={styles.cardItem}>
+        <Card>
+          <div
+            className={classNames(styles.postItem, plus_jakarta_sans.className)}
+          >
+            <div className={styles.postInfo}>
+              <div className={styles.userInfo}>
+                <div className={styles.name}>{name}</div>
+                <div className={styles.date}>{date}</div>
               </div>
 
-              <div className={styles.text}>{text}</div>
+              <div className={styles.stars}>
+                <Image alt="stars" src={stars} height={20} width={60} />
+              </div>
             </div>
-          </Card>
-        </div>
-      ))}
-    </Section>
-  );
-};
+
+            <div className={styles.text}>{text}</div>
+          </div>
+        </Card>
+      </div>
+    ))}
+  </Section>
+);
 
 export default UserLoveSection;
