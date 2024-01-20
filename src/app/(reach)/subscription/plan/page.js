@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+
 import Card from "../../../components/card/Card";
 import Section from "../../../components/section/Section";
 import CircleProgressbar from "../../../components/circleProgressbar/CircleProgressbar";
@@ -29,14 +30,16 @@ const data = [
 
 const Plan = () => {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const selectedPlanId = searchParams.get("id");
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.push("/subscription/email-form");
+      router.push(`/subscription/form?id=${selectedPlanId}`);
     }, 3000);
 
     return () => clearTimeout(timer);
-  }, [router]);
+  }, [router, selectedPlanId]);
 
   return (
     <Section title="We are craftingyour spiritual growth plan">

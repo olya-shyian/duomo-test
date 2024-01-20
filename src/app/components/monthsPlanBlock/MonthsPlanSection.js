@@ -30,8 +30,13 @@ const MonthsPlanSection = () => {
           ))}
         </div>
 
-        <Link href="/subscription/plan">
-          <Button title="Get my plan" />
+        <Link
+          href={{
+            pathname: "/subscription/plan",
+            query: checkedMonthsPlan && { id: `${checkedMonthsPlan.id}` },
+          }}
+        >
+          <Button title="Get my plan" disabled={!checkedMonthsPlan} />
         </Link>
 
         <div className={styles.description}>

@@ -3,7 +3,7 @@ import { lora } from "./styles/fonts";
 import "./styles/globals.scss";
 
 export const metadata = {
-  title: "Create Duomo Landing",
+  title: "Duomo Landing",
   description: "Marketing Funnel Implementation",
 };
 
