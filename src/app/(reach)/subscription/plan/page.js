@@ -1,13 +1,15 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-
 import Card from "../../../components/card/Card";
 import Section from "../../../components/section/Section";
 import CircleProgressbar from "../../../components/circleProgressbar/CircleProgressbar";
+import AnimatedProgressBar from "../../../components/animatedProgressBar/AnimatedProgressBar";
 import { plus_jakarta_sans } from "../../../styles/fonts";
+import circleChecked from "../../../../../public/images/circle-checked-icon.png";
 import styles from "./plan.module.scss";
+import Image from "next/image";
 
 const data = [
   {
@@ -32,8 +34,13 @@ const Plan = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const selectedPlanId = searchParams.get("id");
+  const [isTimeOut, setIsTimeOut] = useState(false);
 
   useEffect(() => {
+    setTimeout(() => {
+      setIsTimeOut(true);
+    }, 1700);
+
     const timer = setTimeout(() => {
       router.push(`/subscription/form?id=${selectedPlanId}`);
     }, 3000);
@@ -55,7 +62,19 @@ const Plan = () => {
         <Card>
           {data.map(({ id, text }) => (
             <div key={id} className={plus_jakarta_sans.className}>
-              <div className={styles.text}>{text}</div>
+              <div className={styles.textIem}>
+                <div className={styles.icon}>
+                  {!isTimeOut ? (
+                    <div className={styles.progress}>
+                      <AnimatedProgressBar />
+                    </div>
+                  ) : (
+                    <Image alt="Arrow-up icon" src={circleChecked} width={24} />
+                  )}
+                </div>
+
+                <div className={styles.text}>{text}</div>
+              </div>
 
               {id < data.length && <hr />}
             </div>

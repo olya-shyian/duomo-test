@@ -10,13 +10,16 @@
   },
   "dependencies": {
     "classnames": "^2.5.1",
+    "d3-ease": "^3.0.1",
     "next": "14.0.4",
     "react": "^18",
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18",
+    "react-move": "^6.5.0",
     "sass": "^1.70.0"
   },
   "devDependencies": {
+    "@types/d3-ease": "^3.0.2",
     "@types/node": "20.11.5",
     "@types/react": "18.2.48",
     "autoprefixer": "^10.0.1",
