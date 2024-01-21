@@ -6,11 +6,14 @@ const Button = ({
   title,
   type = "button",
   disabled = false,
+  noStylesDisabled = false,
 }) => (
   <button
     type={type}
-    className={classNames(styles.button, plus_jakarta_sans.className)}
-    disabled={disabled}
+    className={classNames(styles.button, plus_jakarta_sans.className, {
+      [styles.isDisabled]: disabled,
+    })}
+    disabled={noStylesDisabled || disabled}
   >
     {title}
   </button>

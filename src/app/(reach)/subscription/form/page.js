@@ -2,19 +2,24 @@
 
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import Link from "next/link";
 import Section from "../../../components/section/Section";
+import Input from "../../../components/input/Input";
 import Button from "../../../components/button/Button";
+import useValidateEmail from "../../../hooks/useValidateEmail";
+import classNames from "classnames";
+import { inter } from "../../../styles/fonts";
 import styles from "./form.module.scss";
 
 const Form = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [userEmail, setUserEmail] = useState("");
+  const { error, handleError } = useValidateEmail();
 
   const selectedPlanId = searchParams.get("id");
 
-  const handleRadioButtonChange = (event) => {
+  const handleInputChange = (event) => {
+    handleError(event);
     setUserEmail(event.target.value);
   };
 
@@ -42,22 +47,25 @@ const Form = () => {
   };
 
   return (
-    <Section title="Enter your email to getyour personalised Spiritual Growth Plan">
-      <form onSubmit={handleSubmit}>
-        <div>
-          <input
-            className="input"
+    <Section title="Enter your email to get your personalised Spiritual Growth Plan">
+      <form
+        onSubmit={handleSubmit}
+        className={classNames(styles.form, inter.className)}
+      >
+        <div className={styles.email}>
+          <Input
             type="email"
             name="email"
             value={userEmail}
-            onChange={handleRadioButtonChange}
+            onChange={handleInputChange}
             id="name"
+            error={error}
             required
           />
+        </div>
 
-          <label htmlFor="name">emai</label>
-
-          <Button title="Continue" type="submit" />
+        <div className={styles.button}>
+          <Button title="Continue" type="submit" disabled={error.isError} />
         </div>
       </form>
     </Section>

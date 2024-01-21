@@ -36,7 +36,7 @@ const MonthsPlanSection = () => {
             query: checkedMonthsPlan && { id: `${checkedMonthsPlan.id}` },
           }}
         >
-          <Button title="Get my plan" disabled={!checkedMonthsPlan} />
+          <Button title="Get my plan" noStylesDisabled={!checkedMonthsPlan} />
         </Link>
 
         <div className={styles.description}>

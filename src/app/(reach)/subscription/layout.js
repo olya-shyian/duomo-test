@@ -1,4 +1,4 @@
-import BackToTop from "../../components/backToTop/BackToTop";
+import styles from "./layout.module.scss";
 
 export const metadata = {
   title: "Subscription Plan",
@@ -6,12 +6,7 @@ export const metadata = {
 };
 
 const Layout = ({ children }) => {
-  return (
-    <>
-      {children}
-      <BackToTop />
-    </>
-  );
+  return <div className={styles.container}>{children}</div>;
 };
 
 export default Layout;

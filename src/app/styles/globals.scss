@@ -9,7 +9,6 @@
   box-sizing: border-box;
   max-width: $container-max-width;
   min-height: calc(100vh - $header-min-height);
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   padding: 0 24px;
@@ -23,10 +22,11 @@
   }
 
   .home {
-    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 200px;
+
 
     .title {
       font-size: 38px;

@@ -2,6 +2,7 @@ import MonthsPlanSection from "../../components/monthsPlanBlock/MonthsPlanSectio
 import WhatYouGetSection from "../../components/whatYouGetSection/WhatYouGetSection";
 import ResultStatisticsSection from "../../components/resultStatisticsSection/resultStatisticsSection";
 import UserLoveSection from "../../components/userLoveSection/UserLoveSection";
+import BackToTop from "../../components/backToTop/BackToTop";
 
 const Subscription = () => (
   <div>
@@ -10,6 +11,7 @@ const Subscription = () => (
     <ResultStatisticsSection />
     <UserLoveSection />
     <MonthsPlanSection />
+    <BackToTop />
   </div>
 );
 

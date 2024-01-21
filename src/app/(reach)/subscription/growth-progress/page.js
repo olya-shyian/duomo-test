@@ -12,7 +12,7 @@ const GrowthProgress = () => (
         <Image alt="Graph" src={graph} />
       </div>
 
-      <Link href="/">
+      <Link href="/" className={styles.button}>
         <Button title="Continue" />
       </Link>
     </div>

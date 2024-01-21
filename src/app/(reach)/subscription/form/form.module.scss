@@ -1,3 +1,21 @@
-.input {
-  background-color: aquamarine;
+@import "../../../styles/utils/mixins.scss";
+
+.form {
+  width: 100%;
+
+  .email {
+    @include onIPad {
+      margin: 40px 0 30px;
+    }
+  }
+
+  .button {
+    position: absolute;
+    bottom: 24px;
+    width: 100%;
+
+    @include onIPad {
+      position: static;
+    }
+  }
 }
