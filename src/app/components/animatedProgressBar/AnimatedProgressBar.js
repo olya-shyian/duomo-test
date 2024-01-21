@@ -14,7 +14,7 @@ const AnimatedProgressBar = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <AnimatedProgressProvider
         valueStart={0}
         valueEnd={100}
@@ -33,7 +33,7 @@ const AnimatedProgressBar = () => {
           </div>
         )}
       </AnimatedProgressProvider>
-    </div>
+    </>
   );
 };
 

@@ -1,5 +1,7 @@
+@import "../../styles/utils/variables.scss";
+
 .section {
-  max-width: 500px;
+  max-width: $container-min-width;
   margin: 48px auto;
   display: flex;
   flex-direction: column;

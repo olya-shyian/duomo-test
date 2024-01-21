@@ -2,10 +2,20 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import classNames from "classnames";
 import arrowUp from "../../../../public/images/arrow-up-icon.svg";
 import styles from "./backToTop.module.scss";
 
 const isBrowser = () => typeof window !== "undefined";
+
+const scrollToTop = () => {
+  if (!isBrowser()) return;
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,15 +30,6 @@ const BackToTop = () => {
     }
   };
 
-  const scrollToTop = () => {
-    if (!isBrowser()) return;
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -39,9 +40,9 @@ const BackToTop = () => {
 
   return (
     <button
-      className={`${styles.scrollToTopButton} ${
-        isVisible ? styles.visible : ""
-      }`}
+      className={classNames(styles.scrollToTopButton, {
+        [styles.visible]: isVisible,
+      })}
       onClick={scrollToTop}
     >
       <Image alt="Arrow-up icon" src={arrowUp} width={30} />

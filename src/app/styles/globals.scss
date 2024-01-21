@@ -7,10 +7,12 @@
 
 .layout {
   box-sizing: border-box;
-  max-width: $container-max-width;
+  width: 100%;
   min-height: calc(100vh - $header-min-height);
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 0 24px;
   font-size: 14px;
   background-color: #fff;
@@ -26,7 +28,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: 200px;
-
 
     .title {
       font-size: 38px;
