@@ -6,7 +6,7 @@ const MonthsPlanOption = ({ monthPlan, onChange, checkedMonthsPlan }) => {
 
   return (
     <>
-      <label className={styles.box} htmlFor={`checkbox-${id}`}>
+      <label className={styles.box}>
         {isMostPopular && (
           <div
             className={classNames(styles.popularPlan, {
@@ -26,17 +26,13 @@ const MonthsPlanOption = ({ monthPlan, onChange, checkedMonthsPlan }) => {
           })}
         >
           <div className="inline-flex items-center">
-            <label
-              className="relative flex items-center p-3 rounded-full cursor-pointer"
-              htmlFor={`checkbox-${id}`}
-            >
+            <div className="relative flex items-center p-3 rounded-full cursor-pointer">
               <input
                 name="type"
                 type="radio"
                 className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-400 border-bolt transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-700 hover:before:opacity-10"
                 value={checkedMonthsPlan}
                 onChange={() => onChange(monthPlan)}
-                id={`checkbox-${id}`}
               />
 
               <span className="absolute text-blue-700 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
@@ -49,7 +45,7 @@ const MonthsPlanOption = ({ monthPlan, onChange, checkedMonthsPlan }) => {
                   <circle data-name="ellipse" cx="8.1" cy="8" r="7"></circle>
                 </svg>
               </span>
-            </label>
+            </div>
 
             <div
               className={classNames(

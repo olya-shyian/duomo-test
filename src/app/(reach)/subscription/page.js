@@ -5,14 +5,14 @@ import UserLoveSection from "../../components/userLoveSection/UserLoveSection";
 import BackToTop from "../../components/backToTop/BackToTop";
 
 const Subscription = () => (
-  <div>
+  <>
     <MonthsPlanSection />
     <WhatYouGetSection />
     <ResultStatisticsSection />
     <UserLoveSection />
     <MonthsPlanSection />
     <BackToTop />
-  </div>
+  </>
 );
 
 export default Subscription;
