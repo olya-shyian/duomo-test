@@ -3,10 +3,10 @@
 
 .container {
   position: relative;
-  min-height: calc(100vh - $header-min-height);
+  min-height: calc(100vh - $header-min-height - $header-padding-bottom);
 
   @include onDesktop {
-    min-height: calc(100vh - $header-big-height);
+    min-height: calc(100vh - $header-big-height - $header-padding-bottom);
     padding: 0 40px;
   }
 }
