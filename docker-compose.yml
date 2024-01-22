@@ -11,3 +11,11 @@ services:
       - /app/node_modules
     environment:
       - name=value
+  client-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "4000:4000"
+    env_file:
+      - .env

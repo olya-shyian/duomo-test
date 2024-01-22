@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "docker-dev": "docker-compose up"
+    "docker": "docker-compose up"
   },
   "dependencies": {
     "classnames": "^2.5.1",
