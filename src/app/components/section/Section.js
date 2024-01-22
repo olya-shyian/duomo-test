@@ -1,10 +1,10 @@
 import styles from "./section.module.scss";
 
 const Section = ({ title, children }) => (
-  <div className={styles.section}>
+  <section className={styles.section}>
     <h2 className={styles.title}>{title}</h2>
     {children}
-  </div>
+  </section>
 );
 
 export default Section;

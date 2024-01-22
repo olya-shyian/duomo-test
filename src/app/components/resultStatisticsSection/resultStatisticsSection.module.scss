@@ -1,8 +1,10 @@
+@import "../../styles/utils/variables.scss";
+
 .resultBlock {
   display: grid;
   grid-template-columns: 75px 1fr;
   padding: 12px 24px;
-  color: #000;
+  color: $black-color;
 
   &:not(:last-child) {
     margin-bottom: 8px;

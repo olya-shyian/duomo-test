@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {emailRegex} from "../const/commonConst";
 
 const initialValue = { isError: false, message: "" };
 
@@ -6,8 +7,7 @@ const useValidateEmail = () => {
   const [error, setError] = useState(initialValue);
 
   const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
+    return emailRegex.test(String(email).toLowerCase());
   };
 
   const handleError = (e) => {

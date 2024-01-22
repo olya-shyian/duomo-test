@@ -1,4 +1,4 @@
-export const MonthsPlanMock = [
+export const MonthsPlanResponseMock = [
   {
     id: 1,
     planTitle: "1-Month Plan",

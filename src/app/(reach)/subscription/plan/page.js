@@ -66,7 +66,7 @@ const Plan = () => {
                 <div className={styles.icon}>
                   {!isTimeOut ? (
                     <div className={styles.progress}>
-                      <AnimatedProgressBar />
+                      <AnimatedProgressBar styles={{ width: 18, height: 18 }} />
                     </div>
                   ) : (
                     <Image alt="Arrow-up icon" src={circleChecked} width={24} />

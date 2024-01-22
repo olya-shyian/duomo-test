@@ -1,4 +1,4 @@
-@mixin onIPad {
+@mixin onTablet {
   @media (min-width: 500px) {
     @content;
   }

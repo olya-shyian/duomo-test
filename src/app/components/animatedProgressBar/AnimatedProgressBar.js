@@ -4,7 +4,7 @@ import AnimatedProgressProvider from "../animatedProgressProvider/AnimatedProgre
 import "react-circular-progressbar/dist/styles.css";
 import { useEffect, useState } from "react";
 
-const AnimatedProgressBar = () => {
+const AnimatedProgressBar = ({ styles }) => {
   const [duration, setDuration] = useState(0);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const AnimatedProgressBar = () => {
         easingFunction={easeQuadInOut}
       >
         {(value) => (
-          <div style={{ width: 18, height: 18 }}>
+          <div style={styles}>
             <CircularProgressbar
               value={value}
               strokeWidth={8}

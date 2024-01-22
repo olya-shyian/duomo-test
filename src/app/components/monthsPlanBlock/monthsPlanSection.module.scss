@@ -1,3 +1,5 @@
+@import "../../styles/utils/variables.scss";
+
 .monthsPlan {
   width: 100%;
   display: flex;
@@ -17,14 +19,14 @@
       justify-content: center;
       align-items: center;
       height: 24px;
-      background-color: #222b38;
-      color: #fff;
+      background-color: $primary-text-color;
+      color: $white-color;
       font-size: 12px;
       font-weight: 700;
       line-height: 16px;
       text-transform: uppercase;
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
     }
 
     .plan {
@@ -33,9 +35,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #f1f5fb;
-      border-radius: 8px;
-      border: 2px solid #fff;
+      background-color: $background-color;
+      border-radius: $border-radius;
+      border: 2px solid $white-color;
 
       .planName {
         font-size: 18px;
@@ -46,7 +48,7 @@
         display: flex;
         padding: 8px 12px;
         background-color: #e1e9f4;
-        color: #222b38;
+        color: $primary-text-color;
         border-radius: 4px;
 
         .currency {
@@ -65,7 +67,7 @@
     }
 
     .isChecked {
-      border: 2px solid #0062f5;
+      border: 2px solid $primary-button-color;
     }
 
     .mostPopular {
@@ -74,8 +76,8 @@
     }
 
     .isCheckedMostPopular {
-      border: 2px solid #0062f5;
-      background-color: #0062f5;
+      border: 2px solid $primary-button-color;
+      background-color: $primary-button-color;
     }
   }
 }
@@ -88,7 +90,7 @@
   margin-top: 16px;
 
   .link {
-    color: #222b38;
+    color: $primary-text-color;
     font-weight: 500;
   }
 }

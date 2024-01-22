@@ -11,8 +11,8 @@
   align-items: center;
   padding: 0 24px;
   font-size: 14px;
-  background-color: #fff;
-  color: #222b38;
+  background-color: $white-color;
+  color: $primary-text-color;
 
   @include onDesktop {
     min-height: calc(100vh - $header-big-height);

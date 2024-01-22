@@ -1,12 +1,14 @@
+@import "../../styles/utils/variables.scss";
+
 .scrollToTopButton {
   position: fixed;
   bottom: 20px;
   right: 20px;
   padding: 10px 15px;
   background-color: #007bff;
-  color: #fff;
+  color: $white-color;
   border: none;
-  border-radius: 8px;
+  border-radius: $border-radius;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;

@@ -12,6 +12,7 @@ const Input = ({
   required = false,
 }) => {
   const [blurred, setBlurred] = useState(false);
+  const showError = blurred && error.isError;
 
   const handleBlur = () => {
     setBlurred(true);
@@ -35,9 +36,7 @@ const Input = ({
         required={required}
       />
 
-      {blurred && error.isError && (
-        <div className={styles.errorMessage}>{error.message}</div>
-      )}
+      {showError && <div className={styles.errorMessage}>{error.message}</div>}
 
       <label className={styles.label} htmlFor="name">
         Email

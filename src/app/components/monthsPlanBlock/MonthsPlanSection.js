@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { MonthsPlanMock } from "./__Mocks__/MonthsPlanMock";
+import { MonthsPlanResponseMock } from "./__Mocks__/MonthsPlanResponseMock";
 import { plus_jakarta_sans } from "../../styles/fonts";
 import Button from "../button/Button";
 import MonthsPlanOption from "./MonthsPlanOption";
@@ -20,7 +20,7 @@ const MonthsPlanSection = () => {
     <Section title="Choose your plan">
       <div className={plus_jakarta_sans.className}>
         <div className={styles.monthsPlan}>
-          {MonthsPlanMock.map((plan) => (
+          {MonthsPlanResponseMock.map((plan) => (
             <MonthsPlanOption
               monthPlan={plan}
               onChange={handleRadioButtonChange}

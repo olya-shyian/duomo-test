@@ -1,3 +1,5 @@
+@import "../../styles/utils/variables.scss";
+
 .container {
   margin: 0 auto;
   position: relative;
@@ -9,8 +11,8 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;
-    background-color: #f1f5fb;
-    border-radius: 8px;
+    background-color: $background-color;
+    border-radius: $border-radius;
   }
 
   .label {
@@ -21,7 +23,7 @@
     font-size: 12px;
     font-weight: 600;
     line-height: 16px;
-    color: #0062f5;
+    color: $primary-button-color;
   }
 
   .isError {

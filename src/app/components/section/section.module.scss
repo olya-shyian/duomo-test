@@ -1,7 +1,7 @@
 @import "../../styles/utils/variables.scss";
 
 .section {
-  max-width: $container-min-width;
+  max-width: $content-container;
   margin: 48px auto;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,6 @@
     line-height: 32px;
     margin-bottom: 16px;
     text-align: center;
-    color: #000;
+    color: $black-color;
   }
 }

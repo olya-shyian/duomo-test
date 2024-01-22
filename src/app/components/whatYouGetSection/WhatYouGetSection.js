@@ -16,26 +16,24 @@ const results = [
   { id: 5, text: "You grow closer to God through everyday Bible reading" },
 ];
 
-const WhatYouGetSection = () => {
-  return (
-    <Section title="What you get">
-      <Card>
-        {results.map(({ id, text }) => (
-          <div key={id} className={plus_jakarta_sans.className}>
-            <div className={styles.resultBlock}>
-              <div className={styles.checkedIcon}>
-                <Image alt="checked Icon" src={checkedIcon} width={14} />
-              </div>
-
-              <div className={styles.text}>{text}</div>
+const WhatYouGetSection = () => (
+  <Section title="What you get">
+    <Card>
+      {results.map(({ id, text }) => (
+        <div key={id} className={plus_jakarta_sans.className}>
+          <div className={styles.resultBlock}>
+            <div className={styles.checkedIcon}>
+              <Image alt="checked Icon" src={checkedIcon} width={14} />
             </div>
 
-            {id < results.length && <hr />}
+            <div className={styles.text}>{text}</div>
           </div>
-        ))}
-      </Card>
-    </Section>
-  );
-};
+
+          {id < results.length && <hr />}
+        </div>
+      ))}
+    </Card>
+  </Section>
+);
 
 export default WhatYouGetSection;

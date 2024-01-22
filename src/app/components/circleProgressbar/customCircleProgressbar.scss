@@ -1,14 +1,16 @@
+@import "../../styles/utils/variables.scss";
+
 .CircularProgressbar {
   .CircularProgressbar-path {
     stroke: #0cbd68;
   }
 
   .CircularProgressbar-trail {
-    stroke: #fff;
+    stroke: $white-color;
   }
 
   .CircularProgressbar-text {
-    fill: #000;
+    fill: $black-color;
     font-weight: 600;
   }
 }

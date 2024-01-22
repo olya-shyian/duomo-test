@@ -9,7 +9,7 @@
   bottom: 24px;
   width: 100%;
 
-  @include onIPad {
+  @include onTablet {
     position: static;
   }
 }

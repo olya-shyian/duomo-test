@@ -59,7 +59,7 @@ const MonthsPlanOption = ({ monthPlan, onChange, checkedMonthsPlan }) => {
 
           <div className={styles.planDetails}>
             <span className={styles.currency}>$</span>
-            <div className={styles.planPrice}>{price}</div>
+            <span className={styles.planPrice}>{price}</span>
           </div>
         </div>
       </label>
