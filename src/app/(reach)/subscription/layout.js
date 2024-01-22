@@ -1,4 +1,3 @@
-import Header from "../../components/header/Header";
 import styles from "./layout.module.scss";
 
 export const metadata = {
@@ -6,15 +5,8 @@ export const metadata = {
   description: "Marketing Funnel Implementation",
 };
 
-const Layout = ({ children }) => {
-  return (
-    <div>
-      <Header />
-      <div className={styles.layout}>
-        <div className={styles.container}>{children}</div>
-      </div>
-    </div>
-  );
-};
+const Layout = ({ children }) => (
+  <div className={styles.container}>{children}</div>
+);
 
 export default Layout;
