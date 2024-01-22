@@ -2,37 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "utils/variables.scss";
-@import "utils/mixins";
-
-.layout {
-  box-sizing: border-box;
-  width: 100%;
-  min-height: calc(100vh - $header-min-height);
-  margin: 0 auto;
+.home {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 24px;
-  font-size: 14px;
-  background-color: #fff;
-  color: #222b38;
+  margin-top: 200px;
 
-  @include onDesktop {
-    min-height: calc(100vh - $header-big-height);
-    padding: 0 40px;
-  }
-
-  .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 200px;
-
-    .title {
-      font-size: 38px;
-      font-weight: bold;
-      margin-bottom: 16px;
-    }
+  .title {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 16px;
   }
 }

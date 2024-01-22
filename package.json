@@ -17,7 +17,8 @@
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18",
     "react-move": "^6.5.0",
-    "sass": "^1.70.0"
+    "sass": "^1.70.0",
+    "sharp": "^0.33.2"
   },
   "devDependencies": {
     "@types/d3-ease": "^3.0.2",
